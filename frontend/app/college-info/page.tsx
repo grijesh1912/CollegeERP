@@ -1,8 +1,9 @@
 "use client";
 
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function CollegeInfoPage() {
+function CollegeInfoContent() {
   const searchParams = useSearchParams();
 
   const tab = searchParams.get("tab") || "surjan";
@@ -116,5 +117,13 @@ The curriculum and training initiatives help students become industry-ready prof
 
       </div>
     </>
+  );
+}
+
+export default function CollegeInfoPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CollegeInfoContent />
+    </Suspense>
   );
 }
