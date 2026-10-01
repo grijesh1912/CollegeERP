@@ -10,6 +10,7 @@ export type Faculty = {
   post: string;
   qualification:string;
   email:string;
+  image: string;
   branch:string;
 };
 
