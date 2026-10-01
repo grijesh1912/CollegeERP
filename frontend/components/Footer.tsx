@@ -1,23 +1,3 @@
-// export default function Footer() {
-//   return (
-//     <footer className="bg-gray-900 text-white p-8 mt-10">
-//       <div className="text-center">
-//         <h2 className="text-lg font-semibold">
-//           Smt. S R Patel Engineering College
-//         </h2>
-
-//         <p>Affiliated to GTU | Approved by AICTE</p>
-
-//         <p className="mt-2">
-//           © 2026 All Rights Reserved
-//         </p>
-//       </div>
-//     </footer>
-//   );
-// }
-
-
-
 "use client";
 
 import { usePathname } from "next/navigation";
