@@ -1,33 +1,13 @@
-// export default function About() {
-//   return (
-//     <div className="container mx-auto py-16">
-//       <h1 className="text-4xl font-bold">
-//         About Our College
-//       </h1>
-
-//       <p className="mt-6">
-//         Smt. S R Patel Engineering College is committed to
-//         providing quality education and research.
-//       </p>
-//     </div>
-//   );
-// }
-
-
-
-
-
-
 "use client";
 
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 
-export default function AboutPage() {
+function AboutContent() {
   const searchParams = useSearchParams();
 
-const [activeTab, setActiveTab] = useState("trust");
+  const [activeTab, setActiveTab] = useState("trust");
 
 useEffect(() => {
   const tab = searchParams.get("tab");
@@ -477,5 +457,13 @@ She was awarded with best teacher award. She has visited different countries suc
 
       </div>
     </>
+  );
+}
+
+export default function AboutPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <AboutContent />
+    </Suspense>
   );
 }
