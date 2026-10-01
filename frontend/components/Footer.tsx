@@ -80,6 +80,9 @@ export default function Footer() {
             <p className="mt-2">
               © 2026 All Rights Reserved
             </p>
+            <p className="mt-2 text-sm text-gray-300">
+              Designed by <span className="font-semibold text-white">Prof. Grijesh Nemiwal</span>
+            </p>
           </div>
 
         </div>
