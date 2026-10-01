@@ -8,10 +8,10 @@ export type Lab = {
 export type Faculty = {
   name: string;
   post: string;
-  qualification:string;
-  email:string;
-  image: string;
-  branch:string;
+  qualification?:string;
+  email?:string;
+  image?: string;
+  branch?:string;
 };
 
 export type Department = {
